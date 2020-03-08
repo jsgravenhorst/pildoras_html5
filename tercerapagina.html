@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            /*  '^' se usa para indicar que aplique el estilo a las etiquetas p que empiecen con las letras especificadas
+                 p[name^="mis"]
+                 {
+                    color: #0000FF;
+                  }
+
+                '$' es usa para indicar que aplique el estilo a las etiquetas p que terminen con las letras especificadas
+                 p[name$="mis"]
+                 {
+                     color: #0000FF;
+                  }
+
+                '*' se usa para indicar que aplique  el estilo a todas las etiquetas  que incluya las letras especificadas
+                 p[name*="mis"]
+                 {
+                    color: #0000FF;
+                 }
+            */
+            p[name^="miselementos"]{
+                color: #0000FF;
+            }
+            /* Seudo clases*/
+            /* Aplica el estilo al segundo elemento teniendo en cuenta que deben ser hermanos
+               Si se usa odd dentro de los parentesis significa a los elementos impares
+               Si se usa even dentro de los parentesis significa a los elementos pares
+               p:[first-child] se aplica a los primeros hijos
+               p:[last-child] se aplica a los ultimos hijos
+            */
+            li:nth-child(2){
+                color: red;
+            }
+
+        </style>
+    </head>
+    <body>
+        <p name="miselementos">Hola</p>
+        <p name="miselementos">Adios</p>
+        <p>Enero</p>
+        <ul>
+            <li>Quienes Somos</li>
+            <li>Productos</li>
+            <li>Donde estamos</li>
+        </ul>
+        <ol>
+            <li>Frutas</li>
+            <li><p>Manzana</p></li>
+            <li>Piña</li>
+        </ol>
+    </body>
+</html>

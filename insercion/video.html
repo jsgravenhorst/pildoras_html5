@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <link rel="stylesheet" href="../css/videos.css">
+    </head>
+    <body>
+        <!-- autoplay es para que el video empiece automaticamente -->
+        <!-- controls es para que se visualicen los controles -->
+        <!-- loop es para que el video vuelva y se inicie -->
+        <!-- poster es para que aparezca una imagen antes de reproducir el video -->
+        <!-- <video src="../videos/video-pildoras.mp4" controls autoplay width="500" height="500"></video> -->
+       <!-- Si el navegador no admite el formato mp4, se hace lo siguiente -->
+        <section id="video">
+            <video id="mivideo" width="720" controls>
+                <source src="../videos/video-pildoras.mp4">
+                <!-- Aca se pone el otro formato del video por ejemplo avi -->
+                <!-- <source src=""../videos/video-pildoras.avi"> -->
+            </video>
+            <nav>
+                <div id="botones">
+                    <button type="button" id="idboton">Play</button>
+                </div>
+                <div id="barra">
+                    <div id="progreso">
+
+                    </div>
+                </div>
+            </nav>
+        </section>
+    </body>
+</html>

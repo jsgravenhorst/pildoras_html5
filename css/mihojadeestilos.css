@@ -1,0 +1,44 @@
+/* El signo '#' es el selector de tipo id Se aplica a un solo elementp */
+/* El signo '.' es el selector de tipo clase Se aplica a cuantos elementos se requiera  */
+
+/**************************************************************************************************************************************************************************************************/
+#cabeceraweb {
+    background-color:#0000FF;
+}
+
+#navegacionprincipal {
+    background-color: red;
+}
+
+#barralateral {
+    background-color: green;
+    float: left;
+    height: 1394px;
+}
+
+#contenidoprincipal {
+    /*background-color: purple;*/
+    margin-left: 210px;
+    padding-top: 15px;
+    padding-left: 15px;
+    /* Para hacer un degradado*/
+    /* top es para decir que empieza desde la parte de arriba */
+    /* % se usa para decir que tanto degradado se quiere el degradado*/
+    background: -moz-linear-gradient(top, #0000FF, #33FFFF); /* para que funcione en mozilla */
+    background: -webkit-linear-gradient(top, #0000FF 10%, #33FFFF); /* para que funcione en chrome */
+    background: -o-linear-gradient(top, #0000FF 10%, #33FFFF); /* para que funcione en Opera */
+    background: -ms-linear-gradient(top, #0000FF, #33FFFF); /* para que funcione en explorer */
+}
+
+#pieprincipal {
+    background-color: yellow;
+    clear: both;
+    margin-top: 8px;
+}
+
+/* Se usa para que el contenido de la etiqueta quede uno al lado del otro */
+li {
+    background-color: yellow;
+    display: inline;
+}
+

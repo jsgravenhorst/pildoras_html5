@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Cuarta página de programación HTML5</title>
+        <style>
+            #principal {
+                width: 500px;
+                background-color: red;
+                text-align: center;
+                /* Esta haciendo un margin por arriba y por abajo de 15px y con auto significa derecha e izquierda */
+                margin: 15px auto;
+                /* Sino se agrega medida se asume que es en todos los lados */
+                padding: 15px;
+                border: 3px solid blue;
+                /* Para redondear los bordes de la caja */
+                border-radius: 17px;
+                /* Para crear un efecto de sombra. El primer valor es el desplazamiento horizontal de la sombra, el segundo el vertical , el tercer valor es la difuminacion es decir para que
+                  quede mas claro */
+                box-shadow: darkgray 7px 7px 5px;
+            }
+            /* Permite insertar la fuente que esta en la raiz del servidor */
+            /* La fuente puede no estar disponibles para todos los pcs, para eso se descarga la fuente y se ubica en el servidor, no se puede poner en un carpeta, debe estar en la raiz*/
+            @font-face {
+                font-family: "MiPropiaFuente";
+                src: url("BAUHS93.ttf");
+            }
+            #titulo{
+                font: bold 17px 'MiPropiaFuente';
+                text-shadow: darkgray 3px 3px 5px;
+            }
+            /*
+            #titulo{
+                font: bold 17px Verdana, Geneva, sans-serif;
+                text-shadow: darkgray 3px 3px 5px;
+            }
+            */
+
+        </style>
+    </head>
+    <body>
+        <header id="principal">
+            <!-- span se usa para aplicar estilos a palabras indiviudales o a grupos de palabras, por ejemplo a un grupo de palabras de un parrafo no a todo -->
+            <span id="titulo">Estilos CSS3</span>
+        </header>
+    </body>
+</html>

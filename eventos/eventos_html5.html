@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <!-- Se construye un manejador de eventos  -->
+        <script>
+            /*
+
+            function datipoflor()
+            {
+                //document.getElementsByTagName("img")[0].onclick=tipoFlor;
+
+                let imagen = document.getElementsByTagName("img")[0];
+                imagen.addEventListener("click", tipoFlor, false);
+            }
+            window.onload=datipoflor;
+             */
+            let imagen;
+
+            function tipoFlor()
+            {
+                alert("Pensamiento");
+            }
+
+            function manejaFlor()
+            {
+                imagen = document.getElementsByTagName("img")[0];
+                imagen.addEventListener("mouseover", crecer, false);
+                imagen.addEventListener("mouseout", menguar, false);
+                imagen.addEventListener("click", tipoFlor, false);
+            }
+            function crecer()
+            {
+                imagen.width  = 225;
+                imagen.height = 225;
+            }
+
+            function menguar()
+            {
+                imagen.width  = 200;
+                imagen.height = 200;
+            }
+            window.onload=manejaFlor;
+        </script>
+    </head>
+    <body>
+        <p><img src="../images/1.jpg" alt="flor Pensamiento"></p>
+    </body>
+</html>

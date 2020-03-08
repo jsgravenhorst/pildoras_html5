@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            function losEventos() {
+
+                let elemento1 = document.getElementsByTagName("p")[0];
+                let elemento2 = document.getElementsByTagName("img")[0];
+
+                /* El tercer parametro fija la prioridad de los eventos  el true se ejecuta primero*/
+                elemento1.addEventListener("click", aviso2, true);
+                elemento2.addEventListener("click", aviso1, false);
+            }
+            function aviso1() {
+                alert("Hola soy la imagen");
+            }
+            function aviso2() {
+                alert("Hola soy el parrafo");
+            }
+            window.addEventListener("load", losEventos, false);
+        </script>
+    </head>
+    <body>
+        <p><img src="../images/1.jpg" alt=""></p>
+    </body>
+</html>

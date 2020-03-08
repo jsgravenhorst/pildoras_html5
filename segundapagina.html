@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Pagina de eneseñanza html 5"/>
+        <meta name="keywords" content="html5, css3, JavaScript, diseño web">
+        <title>Segunda página de programación en HTML5</title>
+        <link rel="stylesheet" href="css/mihojadeestilos.css">
+        <!-- Estilo de Cabecera -->
+        <!-- Para cambiar el color de la barra lateral sin afectar la barra de la otra pagina. Es una especie de override -->
+        <style>
+            #barralateral {
+                background-color: blue;
+            }
+        </style>
+    </head>
+    <!-- ************************************************************** ORGANIZACIÓN DEL BODY EN HTML5 **************************************************************************** -->
+    <body>
+        <!-- ************************************************************** Cabecera **************************************************************************** -->
+        <!-- Tiene importancia cuando la página sea compatible con todos los dispositivos  -->
+        <header id="cabeceraweb">
+            <h1>Este sería el título de nuestra web</h1>
+        </header>
+        <!-- ************************************************************** Barra de Navegacion  **************************************************************************** -->
+        <nav id="navegacionprincipal">
+            <!-- Se usan para construir listas desordenadas Si se usa la etiqueta <ol> se muestra una lista con números en lugar de puntos -->
+            <ul>
+                <!-- Se usan para los elementos de la lista -->
+                <li>Quienes somos</li>
+                <!-- se usa para cuando se aplica el estilo en linea para un solo elemento -->
+                <li style="background-color: green;">Nuestros Productos</li>
+                <li>Precios</li>
+                <li>Contactanos</li>
+            </ul>
+        </nav>
+        <!-- ************************************************************** Barra Lateral  **************************************************************************** -->
+        <aside id="barralateral">
+            <blockquote>
+                Primer Elemento
+            </blockquote>
+            <blockquote>
+                Segundo Elemento
+            </blockquote>
+            <blockquote>
+                Tercer Elemento
+            </blockquote>
+        </aside>
+        <!-- ************************************************************** Contenido Principal  **************************************************************************** -->
+        <section id="contenidoprincipal">
+            <!-- Se usa para organizar informacion relacionada -->
+            <article>
+                <!-- La etiqueta header también se puede usar dentro de otros elementos -->
+                <header>
+                    <hgroup>
+                        <h2>Título de la noticia 1</h2>
+                        <h3>Subtítulo de la noticia</h3>
+                    </hgroup>
+                </header>
+                <!-- Para insertar una image -->
+                <figure>
+                    <img src="images/rolex.jpg" alt="Watch Rolex"/>
+                    <!-- Para agregar pies de imagenes -->
+                    <figcaption>
+                        Watch Rolex with Diamonds
+                    </figcaption>
+                </figure>
+                <!-- Mark se usa para resaltar el texto como con un marcador -->
+                <p><mark>Noticia 1</mark></p>
+                <!-- Strong se usa para texto en bold -->
+                <p><strong>Seguimos hablando de noticia 1</strong></p>
+                <!-- em se usa para texto en cursiva -->
+                <p><em>Terminanos de hablar de la noticia 1</em></p>
+                <footer>
+                    <p>Comentarios de usuarios</p>
+                </footer>
+            </article>
+
+            <article>
+                <header>
+                    <h2>Título de la noticia 2</h2>
+                </header>
+
+                <p>Noticia 2</p>
+                <p>Seguimos hablando de noticia 2</p>
+                <p>Terminanos de hablar de la noticia 2</p>
+                <!-- Se usa para hacer referencia a titulos de algo-->
+                <p><cite>Esto es para decir que es una cita</cite></p>
+                <footer>
+                    <!-- Se usa para texto legales-->
+                    <p><small>Texto legales </small>Comentarios</p>
+                    <!-- Se usa para todo lo relacionado con informacion de direccion -->
+                    <address>Telfono 1234567 Direccion 7</address>
+                </footer>
+            </article>
+
+            <article>
+                <header>
+                    <hgroup>
+                        <h2>Título de la noticia 3</h2>
+                        <h3>Subtítulo de la noticia 3</h3>
+                    </hgroup>
+
+                </header>
+                <p>Noticia 3</p>
+                <p>Seguimos hablando de noticia 3</p>
+                <p>Terminanos de hablar de la noticia 3</p>
+                <time datetime="2017/07/17">Noticia publicada el dia 07/07/2017</time>
+            </article>
+
+        </section>
+        <!-- ********************************************************************* Pie de Pagina      **************************************************************************** -->
+        <footer id="pieprincipal">
+            Derechos reservados
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript Olonte</title>
+        <!-- El alert se ejecuta en primera instancia porque el browser lee de arriba hacia abajo -->
+        <!--
+        <script>
+            alert("Olonte Apps");
+        </script>
+        -->
+        <!-- Poniendo el alert en un archivo independiente -->
+        <script src="../file_script.js"></script>
+        <style>
+            .importante{
+                color: #F00;
+            }
+        </style>
+    </head>
+    <body>
+        <!--onclick JavaScript en linea -->
+        <!--
+        <p onclick="alert('Olonte Apps');">Estamos estudiando JavaScript</p>
+        -->
+        <!-- Se llama a la funcion onClick() que esta en el archivo file_scipt -->
+       <!--
+        <p onclick="onClick();">Estamos estudiando JavaScript</p>
+        -->
+       <!--
+        <p onmouseover="onClick();">Llamamos la funcion pasando el cursor sobre el texto</p>
+        -->
+        <p>Llamando desde el archivo js la funcion</p>
+        <p id="importante">Segundo parrafo</p>
+        <p>Tercer parrafo</p>
+        <p class="importante">Cuarto parrafo</p>
+    </body>
+</html>
