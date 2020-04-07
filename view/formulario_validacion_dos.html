@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!-- El evento invalid genera un objeto error. Se ejecuta cuando se genera una validacion -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            table {
+                text-align: center;
+                background-color: #666666;
+                width: 25px;
+                margin: auto;
+                border: 2px #F30 dashed;
+            }
+            td {
+                padding: 15px;
+            }
+        </style>
+        <script>
+            var edad;
+            function comenzar() {
+                edad = document.getElementById("edad");
+                edad.addEventListener("change", cambiar_rango, false);
+                document.datos_usuario.addEventListener("invalid", validar, true);
+                document.getElementById("enviar").addEventListener("click", enviar, false);
+                document.datos_usuario.addEventListener("input", validar_tiempo_real, false);
+            }
+            function cambiar_rango(){
+                let salida = document.getElementById("rango");
+                var calculo = edad.value - 30;
+
+                if (calculo < 30){
+                    calculo = 0;
+                    edad.value = 30;
+                }
+                salida.innerHTML = calculo + " a "+ edad.value;
+            }
+
+            function validar(e){
+                /* target dice que objeto desencadeno el error */
+                let elemento = e.target;
+                elemento.style.background = "#FFDDDD";
+            }
+            function enviar(){
+                let campo_usuario = document.getElementById("usuario");
+                let correcto = document.datos_usuario.checkValidity();
+                if (correcto){
+                    document.datos_usuario.submit();
+                }else if (campo_usuario.validity.valueMissing || campo_usuario.validity.patternMismatch) {
+                    alert("!El campo usuario no puede estar vacio y recuerda que tiene que tener tres letras!")
+                }
+            }
+            function validar_tiempo_real(e){
+                let elemento = e.target;
+                if (elemento.validity.valid){
+                    elemento.style.background = "#FFFFFF"
+                } else{
+                    elemento.style.background = "#FFDDDD";
+                }
+            }
+            window.addEventListener("load", comenzar, false);
+        </script>
+    </head>
+    <body>
+        <section>
+            <form id="datos_usuario" name="datos_usuario">
+                <table>
+                    <tr>
+                        <td><label for="usuario">Usuario:</label></td>
+                        <td><input id="usuario" name="usuario" pattern="[A-Za-z]{3}" maxlength="10" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="correo">Email:</label></td>
+                        <td><input id="correo" name="correo" type="email" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="edad">Edad:</label> </td>
+                        <td><input id="edad" name="edad" type="range" min="0" max="120" value="30" step="30"></td>
+                    </tr>
+                    <tr>
+                        <td><output id="rango" name="rango">0 a 30</output></td>
+                    </tr>
+                    <tr>
+                        <td><input id="enviar" name="enviar" type="submit" value="Enviar"></td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+    </body>
+</html>

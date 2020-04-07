@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- El atributo autocomplete se usa para habilitar o deshabilitar la autocompletar de los campos on activar off desactivar -->
+<!-- El atributo step se usa para agregarle la validación de permitir solo multiplos de determinado valor  -->
+<!-- El atributo multiple se usa para enviar mas de un valor en un campo, por ejemplo para enviar mas de un correo -->
+<!-- El atributo autofocus se usa para situar el cursor en el campo deseado apenas se ingrese a la pagina -->
+<!-- El atributo pattern se usa para hacer validaciones especiales -->
+<!-- El atributo form se usa para constuir un elemento de formulario fuera del formulario principal -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <section>
+            <form name="miformulario" id="miformulario" method="get">
+                <div id="bccampo">
+                    <label for="texto">Campo</label>
+                    <input type="text" id="texto" name="texto" autocomplete="on" placeholder="Campo obligatorio" required autofocus>
+                </div>
+                <br>
+                <div id="bccorreo">
+                    <label for="correo">Correo</label>
+                    <input type="email" id="correo" name="correo" multiple>
+                </div>
+                <br>
+                <div id="bcbusqueda">
+                    <label for="buscar">Busqueda</label>
+                    <input type="search" id="buscar" name="buscar">
+                </div>
+                <br>
+                <div id="bcurl">
+                    <label for="url">Url</label>
+                    <input type="url" id="url" name="url" >
+                </div>
+                <br>
+                <div id="bcnumero">
+                    <label for="numero">Numero</label>
+                    <input type="number" id="numero" name="numero" min="1" max="100" step="5" placeholder="Multiplos de 5">
+                </div>
+                <br>
+                <div id="bcrango">
+                    <label for="rango">Rango</label>
+                    <input type="range" id="rango" name="rango" min="0" max="7" >
+                </div>
+                <br>
+                <div id="bcfecha">
+                    <label for="fecha">Fecha</label>
+                    <input type="date" id="fecha" name="fecha">
+                </div>
+                <br>
+                <div id="bcmes">
+                    <label for="mes">Mes</label>
+                    <input type="month" id="mes" name="mes">
+                </div>
+                <br>
+                <div id="bcsemana">
+                    <label for="semana">Semana</label>
+                    <input type="week" id="semana" name="semana">
+                </div>
+                <br>
+                <div id="bchora">
+                    <label for="hora">Hora</label>
+                    <input type="time" id="hora" name="hora">
+                </div>
+                <br>
+                <div id="bczonahr">
+                    <label for="zonahr">Zona Horaria</label>
+                    <input type="datetime-local" id="zonahr" name="zonahr">
+                </div>
+                <br>
+                <div id="bcpostal">
+                    <label for="postal">Codigo Postal</label>
+                    <input pattern="[0-9]{5}" id="postal" name="postal">
+                </div>
+                <br>
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+        <br>
+        <img src="../images/1.jpg" alt="aqui va una flor">
+        <div id="bcimagen">
+            <label for="imagen">Imagen</label>
+            <input type="text" id="imagen" name="imagen" form="miformulario">
+        </div>
+
+    </body>
+</html>

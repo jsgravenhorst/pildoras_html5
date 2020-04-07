@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            table {
+                text-align: center;
+                background-color: #666666;
+                width: 25px;
+                margin: auto;
+                border: 2px #F30 dashed;
+            }
+            td {
+                padding: 15px;
+            }
+        </style>
+        <script>
+            function comenzar()
+            {
+                let nombre = document.getElementById("nombre");
+                let apellido = document.getElementById("apellido");
+                nombre.addEventListener("input", validar, false);
+                apellido.addEventListener("input", validar, false);
+                validar();
+            }
+            function validar()
+            {
+                if (nombre.value === "" && apellido.value === "")
+                {
+                    nombre.setCustomValidity("Introduce nombre o apellido");
+
+                    nombre.style.background = "#FFDDDD";
+                    apellido.style.background = "#FFDDDD";
+                }else {
+                    nombre.setCustomValidity("");
+
+                    nombre.style.background = "#FFFFFF";
+                    apellido.style.background = "#FFFFFF";
+                }
+            }
+
+            window.addEventListener("load",comenzar,false);
+        </script>
+    </head>
+    <body>
+        <section>
+            <form name="registro" id="registro" method="get">
+               <table>
+                   <tr>
+                       <td><label for="nombre">Nombre:</label></td>
+                       <td><input id="nombre" name="nombre" type="text"></td>
+                   </tr>
+                   <tr>
+                       <td><label for="apellido">Apellido:</label></td>
+                       <td><input id="apellido" name="apellido" type="text"></td>
+                   </tr>
+                   <tr>
+                       <td><label for="edad">Edad:</label> </td>
+                       <td><input id="edad" name="edad" type="number" min="1" max="7"></td>
+                   </tr>
+                   <tr>
+                       <td><input type="submit" value="Enviar"></td>
+                   </tr>
+               </table>
+            </form>
+        </section>
+    </body>
+</html>
