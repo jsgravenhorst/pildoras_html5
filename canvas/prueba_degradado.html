@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            section{
+                width: 500px;
+                margin: auto;
+            }
+        </style>
+        <script>
+            function comenzar() {
+
+                let elemento = document.getElementById("lienzo");
+                let lienzo = elemento.getContext("2d");
+
+                /* createLinearGradient(x1, y1, x2, y2) */
+                let degragado = lienzo.createLinearGradient(0, 150, 500, 150);
+
+                /* Inicio primer color degradado */
+                /* addColorStop(number, color) number significa donde debe terminar el rojo
+                *  Para el caso de los colores los valores que puede tomar number estan entre 0 - 1, es decir
+                *  0,1 - 0,2 - 0,n
+                *
+                 */
+                degragado.addColorStop(0,"red");
+
+                /* Inicio segundo color degradado */
+                degragado.addColorStop(1,"green");
+
+                lienzo.fillStyle = degragado;
+
+                lienzo.fillRect(0, 0, 500, 300);
+            }
+            window.addEventListener("load", comenzar, false);
+        </script>
+    </head>
+    <body>
+        <section id="dibujo">
+            <canvas id="lienzo" width="500" height="300">
+
+            </canvas>
+        </section>
+    </body>
+</html>

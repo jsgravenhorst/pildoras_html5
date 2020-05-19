@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            #lienzo{
+                border: 1px solid #FF0000;
+            }
+        </style>
+        <script>
+            function comenzar(){
+                let elemento = document.getElementById("lienzo");
+                let lienzo = elemento.getContext("2d");
+
+                lienzo.beginPath();
+                                /* arc(x, y, r, x2, y2, boolean)
+                   x, y coordenadas que marcan el centro del circulo
+                   r es el radio del circulo
+                   x2, y2 Son radianes paara estrablecer el angulo que queremos que este en el circulo.
+                   x2 significa que el primer angulo es de 0 radianes y y2 que es de 1 radian
+                   boolean es para saber si solo dibujo el arco (false) o si dibujo el circulo (true)
+                 */
+               //lienzo.arc(100, 100, 50, 0, 1, false);
+                //lienzo.moveTo(50, 50);
+
+                // quadraticCurveTo(x1, y1, x2, y2) hace trazado curvos donde los primeros
+                // parametros corresponde al punto inicial y el segundo el final
+                // x1 y1 es el punto de control fija hacia donde se desea que este la curva
+                //lienzo.quadraticCurveTo(100, 125, 50, 200);
+
+                // moveTo(x,y) establecen el punto de incio del trazado
+                lienzo.moveTo(250, 50);
+                // bezierCurveTo(x1, y1, x2, y2, x3, y3)
+                // x1, y1 primer punto de control
+                // x2, y2 segundo puento de control
+                // x3, y3 punto final del trazado
+                lienzo.bezierCurveTo(200, 125, 300, 125, 250, 200);
+
+
+                lienzo.stroke();
+            }
+            window.addEventListener("load", comenzar, false);
+        </script>
+    </head>
+    <body>
+        <section id="dibujo">
+            <canvas id="lienzo" width="500" height="300">
+
+            </canvas>
+        </section>
+    </body>
+</html>
